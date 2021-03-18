@@ -24,7 +24,7 @@ bool testCreateBoard() {
 
     board.printBoard();
 
-    puts("Does this look like an empty checker board? (y/n)");
+    puts("Does this look like a checker board? (y/n)");
     char ok = getchar();
 
     if(ok == 'y') {

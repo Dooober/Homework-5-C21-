@@ -8,8 +8,19 @@ Board::Board() {
 
     for(int i=0;i<SIZE;i++) {
         for(int j=0;j<SIZE;j++) {
-            gameBoard[i][j].content = Piece();
-            gameBoard[i][j].position = {i, j};
+            if(i<3 && (i+j)%2==1) {
+                gameBoard[i][j].content = Piece(2);
+                gameBoard[i][j].position = {i, j};
+            }
+            else if (i>4 && (i+j)%2==1) {
+                gameBoard[i][j].content = Piece(1);
+                gameBoard[i][j].position = {i, j};
+            }
+            else {
+                gameBoard[i][j].content = Piece();
+                gameBoard[i][j].position = {i, j};
+            }
+
         }
     }
 }
@@ -19,10 +30,10 @@ void Board::printBoard() {
         printf("|");
         for(auto & j : i) {
             if(j.content.name == NULL) {
-                printf("0");
+                printf("00");
             }
             else {
-                printf("%c", j.content.name);
+                printf("%d%c", j.content.player, j.content.name);
             }
             printf("|");
         }
