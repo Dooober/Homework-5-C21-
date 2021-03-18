@@ -8,22 +8,15 @@
 #include <cstdio>
 #include "Piece.h"
 #define SIZE 8
+#include <string>
 
-typedef struct position {
-    int x;
-    int y;
-} Position;
-
-typedef struct cell {
-    Position position;
-    Piece content;
-} Cell;
 
 class Board {
 public:
     Board();
-    Cell gameBoard[SIZE][SIZE];
+    Piece gameBoard[SIZE][SIZE];
     void printBoard();
+    bool move(std::string yourMove, int player);
 };
 
 

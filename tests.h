@@ -11,5 +11,6 @@
 bool tests();
 
 bool testCreateBoard();
+bool testMove();
 
 #endif //CHECKERS_TESTS_H
