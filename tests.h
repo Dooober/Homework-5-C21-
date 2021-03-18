@@ -5,4 +5,11 @@
 #ifndef CHECKERS_TESTS_H
 #define CHECKERS_TESTS_H
 
+#include <cstdio>
+#include "Board.h"
+
+bool tests();
+
+bool testCreateBoard();
+
 #endif //CHECKERS_TESTS_H

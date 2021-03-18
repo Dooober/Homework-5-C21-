@@ -4,10 +4,14 @@
 
 #ifndef CHECKERS_PIECE_H
 #define CHECKERS_PIECE_H
-
+#include <cstdio>
 
 class Piece {
-
+public:
+    Piece();
+    explicit Piece(int player);
+    int player = NULL;
+    char name = NULL;
 };
 
 
